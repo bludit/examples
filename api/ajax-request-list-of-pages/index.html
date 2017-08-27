@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Get a list of pages | Bludit API</title>
+</head>
+<body>
+
+        <div id="response">Requesting...</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+
+                $.ajax({
+                        url: "https://example.com/api/pages",
+                        type: "GET",
+                        data: "token=10a09ba055b73f68e3c9e7c9ea12b432",
+                        dataType: 'json',
+                        success: function(json) {
+                                console.log(json);
+
+                                $("#response").append("<p><b>Success!!!</b></p>");
+                                $("#response").append("<p><b>Status: </b>"+json.status+"</p>");
+                                $("#response").append("<p><b>Message: </b>"+json.message+"</p>");
+
+                                // Print the title of the pages
+                                $("#response").append("<p><b>List of Pages</b></p>");
+                                $.each(json.data, function(index, page) {
+                                        $("#response").append("<br> Page title: " + page.title);
+                                });
+                        },
+                        error: function(data) {
+                                console.log("Error");
+                        }
+                });
+
+        });
+        </script>
+</body>
+</html>
