@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "Hello World",
+		"description": "Print Hello World in the sidebar"
+	}
+}
