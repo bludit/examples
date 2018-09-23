@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 
-	<!-- CSS -->
-	<?php echo Theme::css('css/style.css') ?>
+	<!-- Dynamic title tag -->
+	<?php echo Theme::metaTags('title'); ?>
 
-	<!-- Javascript -->
-	<?php echo Theme::javascript('js/jquery.min.js') ?>
+	<!-- Dynamic description tag -->
+	<?php echo Theme::metaTags('description'); ?>
+
+	<!-- Include CSS Styles from this theme -->
+	<?php echo Theme::css('css/style.css'); ?>
 
 	<!-- Load plugins with the hook siteHead -->
 	<?php Theme::plugins('siteHead') ?>
@@ -23,7 +26,7 @@
 		<h3><?php echo $page->title(); ?></h3>
 
 	<?php elseif ($WHERE_AM_I=='home'): ?>
-		<?php foreach ($pages as $page): ?>
+		<?php foreach ($content as $page): ?>
 		<h3><?php echo $page->title(); ?></h3>
 		<?php endforeach ?>
 
