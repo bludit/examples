@@ -19,6 +19,7 @@
 	<!-- Load plugins with the hook siteBodyBegin -->
 	<?php Theme::plugins('siteBodyBegin') ?>
 
+	<img src="<?php echo $site->logo() ?>" alt="" width="128">
 	<h1><?php echo $site->title() ?></h1>
 	<h2><?php echo $site->slogan() ?></h2>
 
