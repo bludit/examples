@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "Custom Admin controller and view",
+		"description": "Generate a custom controller and view for the admin area, also add a link in the admin panel sidebar. The view returns a form wich show the site title, the controller handle the form post method."
+	}
+}
