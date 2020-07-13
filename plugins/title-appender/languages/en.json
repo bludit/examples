@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "Title Appender",
+		"description": "Append a string at the beginning of the page after the page is created."
+	}
+}
